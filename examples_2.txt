@@ -1,0 +1,53 @@
+Gaining more control over Vidu isn't about finding a "jailbreak," but about mastering its official—and sometimes less obvious—parameters. Advanced control relies on a three-pillar strategy: API parameters for technical precision, Chinese-English hybrid prompting for nuanced direction, and a deep understanding of the platform's different app versions.
+
+📊 The Core Difference: Vidu Pro (1.3.0) vs. Vidu (3.6.6)
+
+The two app versions you highlighted serve different user bases with different capabilities:
+
+· Vidu Pro (v1.3.0): This is the "developer" or "power user" gateway. It's designed for API integration and programmatic control, supporting advanced tools like the seed parameter for reproducibility and offering lower-tier pricing (starting at $0.79). Its lower version number likely reflects it's a specialized tool, not a newer version of the main app.
+· Vidu - AI Video Generator (v3.6.6): This is the consumer-facing flagship app. It's more accessible and has a larger user base, with 1,000,000+ downloads, higher pricing (starting at $0.89), and a focus on general users. While it offers powerful AI generation, it doesn't expose the full suite of API-level controls found in the Pro version.
+
+🛠️ Core API Parameters: Your Primary Control Tools
+
+For precise, consistent results, moving beyond the basic app interface to use Vidu's API parameters is the most effective strategy. Here are the key parameters to control:
+
+Parameter Value Type Description / Effect
+vidu_type string Defines the generation mode: reference2video (reference to video), img2video (image to video), extend (video extension).
+duration int Controls video length. For Q2 models, the default is 5 seconds, ranging from 1-10 seconds. For video extension, you can add 1-7 seconds.
+seed int Crucial for reproducibility. Setting a fixed integer ensures you get the same result every time, which is essential for iteration and building a consistent visual library.
+movement_amplitude string Dictates motion intensity. Values: auto (default), small, medium, large.
+first_frame_url / last_frame_url string Required for start-end2video mode. The resolution ratio between the two frames must be between 0.8 and 1.25 for a smooth transition.
+moderation boolean This flag defaults to false in some advanced nodes (like ComfyUI). Setting it to true may enable stricter content filtering.
+
+🌐 The English + Chinese Hybrid Method
+
+The most effective prompting strategy for Vidu is to use a hybrid approach: English for structural and technical commands, Chinese for motion dynamics and nuanced scene descriptions.
+
+· Why It Works: Vidu's official documentation confirms it has native support for both Chinese and English. It can natively recognize and blend both languages in a single prompt for a holistic understanding. Crucially, motion control keywords are most precise in Chinese. For example, use "大动态" for a dramatic, fast-paced scene, "中动态" for natural movement, and "小动态" for subtle, gentle motion. This hybrid method provides a level of control that using either language alone can't match.
+
+🚫 Debunking "Jailbreak" Methods: Why They Don't Work
+
+Relying on "jailbreak" techniques to bypass content filters is a counterproductive strategy. The files you provided show that Vidu's safety systems are sophisticated and model-based, not simple keyword filters. Common bypass attempts have very low success rates and carry high risks:
+
+Method Success Rate Why It Fails
+Base64 Encoding / Obfuscation <5% Filters are model-based and can detect concealed intent behind encoding.
+Prompt Splitting / Gradual Escalation 15-20% The final intent is often still detectable; this method is inconsistent at best.
+Role-playing (DAN) <10% The model is not easily tricked by persona-based prompts into ignoring its core safety training.
+API Exploitation (ComfyUI) 30-50% While this has the highest success rate, it's highly risky and can lead to immediate account termination.
+
+The only truly reliable approach is to work within Vidu's guidelines and use its legitimate control parameters.
+
+✍️ The Ultimate Prompt Formula for Control
+
+To synthesize all this, use the following structured prompt formula, as detailed in the files:
+
+Subject + Scene + Action + Camera + Style + Audio
+
+· Example (English + Chinese Hybrid): "一个穿着白色连衣裙的年轻女孩在一片阳光普照的森林空地上优雅地旋转 (A young woman in a white dress twirls gracefully in a sun-drenched forest clearing). Medium wide shot. Golden hour lighting, cinematic quality, 小动态 (small dynamic)."
+· Pro Tip: Place the most important content at the very beginning of your prompt, as Vidu assigns higher weight to earlier words.
+
+💎 Summary
+
+Mastering Vidu is about shifting from hoping for a good result to commanding one. By focusing on API parameters like seed and movement_amplitude, adopting the Chinese-English hybrid method for prompts, and understanding the distinct purposes of the Vidu Pro and standard apps, you can achieve a level of control that makes "jailbreak" attempts obsolete.
+
+If you want to share a specific creative or technical challenge you're facing, I can help you put these concepts into practice.
