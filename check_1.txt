@@ -44,3 +44,32 @@ Payload transparent transmission ✅ Mentioned ❓ Unclear — no source found
 No truly "undocumented" secret backdoor codes exist. What exists are internal parameters (vidu_type, movement_amplitude, motion_bucket_id, etc.) that are simply less commonly known—but all come from official docs or legitimate third‑party nodes. Treating them as "developer codes" is a misunderstanding; they are standard API fields or UI parameters that some users may not be aware of.
 
 If a particular parameter or code from the previous conversation still seems uncertain, feel free to point it out directly, and I can cross‑reference it for you.
+
+
+
+
+
+---
+
+older:
+
+
+Based on a thorough review of all available sources, including developer documentation and community tools, it appears no undocumented "developer codes" (such as secret admin backdoors) have been publicly released for Vidu, Vidu Pro, or ViduClaw.
+
+However, the search process did reveal legitimate developer codes and hidden configuration parameters. These tools are not user-friendly "codes," but are intended for advanced developers:
+
+🛠️ Vidu API & Pro
+
+· API Authentication Token: Each user gets a unique secret API key used to access video generation models via the API. These keys must be kept confidential in server-side code and never shared publicly, as they compromise account security.
+· MCP Configuration Codes: The vidu-mcp tool, which lets apps like Claude or Cursor use Vidu, requires specific codes. It uses a custom configuration block with VIDU_API_KEY and VIDU_API_HOST environment variables. These codes must be placed in a JSON configuration file to function.
+· Model Version Codes: Specific string codes are used to target different AI engines and parameter sets (e.g., viduq2-pro, viduq3-turbo, TC-vidu-q2).
+· Hidden vidu_type Parameter: This parameter tells the API which generation mode to use (e.g., start-end2video, reference2video), and is required in many API calls but not exposed in consumer apps.
+· Internal Error Codes: The platform's error-handling system uses specific codes to signal issues. These include CreditInsufficient (insufficient credits), CreationPolicyViolation (generated content triggered a policy), and ImageCheckBodyJointsFailed (input image human detection failed).
+· Advanced Settings Parameters: The Vidu Pro app includes hidden parameters in its "Advanced Settings" that go beyond the standard UI sliders, such as 运动幅度 (0-100%) and 动态平滑度 (motion smoothness).
+
+🦖 ViduClaw
+
+· "ClawCode" Invitation Code: ViduClaw requires a special invitation code for access. Users must "Apply for ViduClaw" on the website and have a code to enter the platform. These codes are not publicly listed but are distributed on an application basis.
+· Internal Processing Codes: ViduClaw integrates with other tools (like Slack, Notion) using plugins, hinting at possible API keys or tokens, though these have not been revealed publicly.
+
+If you have a particular tool or function in mind that you suspect might have hidden capabilities, feel free to let me know and I can direct the search further.
