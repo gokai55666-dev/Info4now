@@ -33,3 +33,132 @@ Vidude Community Guidelines (help.vidude.com) Explicit Policy: The guidelines ex
 · Reproducibility: Set a fixed integer seed parameter to lock generation results, ensuring consistent video output.
 
 If any of these new features or updates require further clarification, please feel free to ask.
+
+
+---
+.
+Here is a straightforward, function-based list of effective terms for Vidu (Standard & Pro). Each entry specifies exactly how to use the term, whether it works better in Chinese or English, and which model supports it.
+
+💡 Golden Rules
+
+· Vague words won't work: "cool," "professional," "cinematic energy," or "make it look good" won't be recognized.
+· Use one main camera movement per prompt: combining moves often confuses the model.
+· Vidu Pro supports a dedicated Negative Prompt field, while Standard users should nest negatives directly in the main prompt.
+
+---
+
+🎬 Camera Movement (运镜)
+
+Term (EN) Term (CN) Implementation Best In
+Slow push-in, Dolly in 镜头推进, 推近 "Slow push-in from medium shot to close-up" Both
+Zoom out, Pull-back 镜头拉远, 拉远 "Gentle pull-back revealing the full scene" Both
+Pan left/right 镜头左移/右移 "Camera pans right across the table" Both
+Tilt up/down 俯拍, 仰拍 "Camera tilts up to reveal the skyline" Both
+Orbit, Arc shot 环绕 "Camera orbits clockwise / 180-degree arc around the subject" Both
+Tracking, Follow 跟随, 跟拍 "Steady tracking shot alongside the runner" Both
+Static shot 固定镜头 "Fixed tripod angle, no movement" Both
+Aerial, Drone 航拍 "Aerial view pulling back" Both
+FPV, First-person 第一人称 "FPV drone perspective" Both
+Time-lapse 延时摄影 "Time-lapse of clouds moving" Q3+
+Macro 微距 "Macro shot, extreme close-up" Q3+
+
+Direction & Speed: For pan/tilt/orbit, always include direction (clockwise, left, right). For speed, use slow, gentle, subtle (smoother motion) or dynamic, fast (more aggressive).
+
+---
+
+🏃 Motion Dynamic (动态控制)
+
+Term (EN) Term (CN) Effect Best In
+Small dynamic, Subtle 小动态, 小幅动态 Minimal movement (hair sway, breathing) Chinese
+Medium, Natural 中动态, 中等动态 Normal walking speed, natural actions Chinese
+Large dynamic 大动态, 快速运动 Explosive action, high-speed movement Chinese
+
+Implementation: Combine Action Description + Dynamic Intensity word. Example: 慢动作奔跑 (small dynamic) vs. 高速冲刺，剧烈运动 (large dynamic).
+
+---
+
+👎 Negative Prompts (Vidu Pro Only)
+
+Use no/not/without as prefixes. Invalid: avoid, exclude, don't.
+
+Negative Prompt List (use in dedicated field):
+
+Layer Terms Weighted Syntax
+Quality no blurry, no low resolution, no jitter, no flickering, no compression artifacts (no jitter:1.2)
+Anatomy no deformed hands, no extra limbs, no malformed face, no asymmetrical eyes (no deformed hands:1.3)
+Culture/Style no western features, no modern clothing, no text, no watermark, no skyscrapers (no text:0.5)
+Physics no floating objects, no impossible perspective, no sudden warping (no floating:1.1)
+
+Key Tips: Keep under 20 English tokens. Place most severe issues first. Default weight is 0.8.
+
+---
+
+🎨 Style & Quality
+
+Term Effect Best In
+4K, 8K, ultra detailed High resolution output English
+cinematic quality, film grain Movie-like texture English
+shallow depth of field Blurred background, focus on subject English
+60fps, slow motion Frame rate / speed control English
+2D anime style 2D animation look English
+3D rendering style Pixar-like CGI English
+realistic Photorealistic output English
+ink wash painting style 水墨风格 English
+line art style 线稿风格 English
+pixel art style 像素风格 English
+oil painting style 油画风格 English
+
+Director styles: 宫崎骏风格 (Miyazaki), 新海诚风格 (Shinkai), 大友克洋风格 (Otomo), 细田守风格 (Hosoda) — work best in Chinese.
+
+---
+
+🎤 Audio Generation (Vidu Q3 & Pro Only)
+
+For better dialogue, write it like a script: use speaker labels, tone tags, pacing, and performance cues.
+
+Element Example Best In
+Dialogue "I can't believe it," she whispered, voice trembling English
+BGM ambient piano, melancholic, upbeat electronic, orchestral swell English
+SFX/Ambient birds chirping, footsteps on gravel, faint whoosh, room tone English
+Lip-sync cues Natural dialogue text English
+
+Limitations: Brand-safe voice remains inconsistent across clips.
+
+---
+
+📷 Reference & Consistency
+
+Feature Implementation Language
+Subject Reference (主体参照) Upload image to lock character. Use same character as reference, maintain facial features Both
+Multi-Entity Consistency (多主体一致性) Q2: up to 7 images; Q3: 4 images + 2 videos Both
+Multi-Angle (多角度一致性) Upload 1-3 angles → builds "360° view" Both
+Start-End Transition Upload start and end frames → generates smooth interpolation Both
+
+Reference image specs: Use 1080×1080px, subject covering >60% of frame, avoid shadows or occlusions.
+
+---
+
+📂 Basic Prompt Structure
+
+Element Example (English) Example (Chinese)
+Subject/Action "A young woman in a white dress twirls" "穿着白色长裙的年轻女孩旋转着"
+Scene "in a sun-drenched forest clearing" "在阳光普照的森林空地上"
+Camera "slow dolly in" "镜头缓慢推进"
+Lighting/Atmosphere "golden hour light, shallow depth of field" "黄金时刻光线，浅景深"
+Style "cinematic quality, 8K" "电影质感，8K高清"
+
+---
+
+✨ Quick Reference by Language
+
+Category Best Language Key Insight
+Motion Dynamics Chinese 大/中/小动态 are trained as dedicated keywords
+Camera Control Either (Chinese recommended) Use one term per prompt, include direction+speed
+Negative Prompts Chinese (higher priority) Place severe issues first; use no/not/without
+Audio & Dialogue English Script-style prompts work best
+Quality & Style English 4K, 8K, cinematic are widely recognized
+Director Styles Chinese 宫崎骏, 新海诚 unlock specific aesthetics
+
+---
+
+Hopefully this gives you exactly what you need for your project. Let me know if you would like to go deeper into any specific category.
