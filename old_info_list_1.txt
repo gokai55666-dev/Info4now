@@ -80,4 +80,147 @@ Claim 34 : The "Background Change" feature allows you to replace or modify the b
 
 
 old answers:
+verification of each claim.
+
+---
+
+✅ True (Fully Verified)
+
+Claim 1: Vidu offers three generation modes: Text-to-Video, Image-to-Video, and Reference-to-Video.
+
+· True. These are the three core generation modes. 
+
+Claim 2: Reference-to-Video mode allows you to upload 1–4 reference images to lock in characters, scenes, and styles.
+
+· True. Claim is accurate. 
+
+Claim 3: Multi-Entity Consistency supports up to 7 reference images to maintain multiple characters or props in a single video, primarily in the Q1 model.
+
+· True. Vidu Q1 supports up to 7 images for multi-entity consistency. 
+
+Claim 4: Subject Reference works across different scenes and angles by uploading one image to a "Subject Library".
+
+· True. 
+
+Claim 5: Multi-angle consistency – uploading 1–3 images of the same subject from different angles – enables a "360‑degree view" of that subject.
+
+· True. 
+
+Claim 6: Vidu officially supports Chinese and English prompts for all core generation modes.
+
+· True. 
+
+Claim 10: Camera movement terms like 推 (push‑in), 拉 (zoom out), 横移 (truck), 环绕 (orbit), and 跟随 (follow) are directly understood by Vidu.
+
+· True. 
+
+Claim 11: Motion amplitude can be set using 小动态 (small/gentle), 中动态 (medium/natural), and 大动态 (large/dynamic). Prompts containing 大动态 generate videos with larger motion amplitude.
+
+· True. Motion amplitude is controlled via UI parameters. 
+
+Claim 13: In Q2 models, [演技强度:弱/中/强] (acting intensity) can be added inside a prompt to control character performance.
+
+· True. 
+
+Claim 14: In Image‑to‑Video, the starting image determines about 80% of the output quality. Recommended specs: resolution ≥720p (draft) or 1080p (final), subject covering >60% of frame.
+
+· True. 
+
+Claim 15: Start‑end transition – uploading both a start frame and an end frame makes the model generate a smooth interpolation between them.
+
+· True. 
+
+Claim 16: Maximum image file size for upload is 50 MB; supported formats: png, jpeg, jpg, webp.
+
+· True. 
+
+Claim 18: Vidu is highly sensitive to negative prompt tokens. Each negative prompt should be ≤ 20 English tokens (or equivalent Chinese) and placed in a dedicated field.
+
+· True. 
+
+Claim 21: Paid in‑app purchases range from $0.79 to $179.99 per item; subscription plans start around $10/month (800 credits).
+
+· True. (Payments API, Standard Plan $10/mo for 800 credits from earlier screenshots.)
+
+Claim 25-27: Pinyin/homophone substitution, emoji/symbol disruption, and using vague pronouns are not verified to bypass filters.
+
+· True. 
+
+Claim 28: Q1: 5s/1080p; Vidu 2.0: 4s & 8s; Q3: 1-16s, 540/720/1080p.
+
+· True. 
+
+Claim 29: Q2/Q3 support any aspect ratio (4:3/3:4/1:1/16:9/9:16). Basic modes offer standard ratios like 16:9 and 9:16.
+
+· True. 
+
+Claim 30: Q3 supports synchronized audio (dialogue, SFX, BGM). Q2 supports BGM insertion but with duration restrictions (no BGM for 9–10 second videos). BGM not available in Q3.
+
+· True. 
+
+Claim 31: Vidu follows a credit-based subscription system; per-second pricing for API users as low as 0.04 CNY per second.
+
+· True. 
+
+Claim 32: Q1 great for still-like but low movement; Q2 quicker results; Q3 feels like real video production.
+
+· True. 
+
+Claim 33: The "Remix" feature allows you to take an existing generated video and adapt it into new versions while maintaining its style and structure.
+
+· True. 
+
+Claim 34: The "Background Change" feature allows you to replace or modify the background of a generated video independently of the foreground subject.
+
+· True. 
+
+---
+
+❌ False (Contradicted by Sources)
+
+Claim 8: The universal prompt formula Subject + Scene + Action + Camera + Style + Audio is effective.
+
+· False. The foundational formula is "Subject/Scene → Scene Description → Environment Description → Artistic Style/Medium".  The claim adds "Action" and "Audio" which are not core components.
+
+Claim 9: Placing the most important content at the beginning of a prompt yields higher weight from the model.
+
+· False. No official documentation supports this.
+
+Claim 12: The formula for motion control is Action description + Motion intensity word.
+
+· False. Motion amplitude is selected via movement_amplitude parameter (auto/small/medium/large), not embedded in prompt text. 
+
+Claim 17: Negative prompts must use standard negation prefixes like no, not, without, un-, or non-.
+
+· False. This is a "best practice" but the claim presents it as a "must" requirement. 
+
+Claim 19: Weighting negative prompts with parentheses like (no deformed hands:1.3) – this format is unverified in official Vidu guides.
+
+· False. This format is indeed unverified in official Vidu guides.
+
+Claim 24: Language switching (using languages other than Chinese/English) is not recommended and can cause errors.
+
+· False. Official docs claim support for "more than 200 languages".  Third-party sources confirm issues with Japanese/French. 
+
+Claim 7: Other languages (e.g., Japanese, French) are not officially supported; Japanese input may trigger a 400 error, and French can cause semantic deviation.
+
+· False. (See Claim 24.) This contradicts official docs. 
+
+Claim 22: Vidu uses real‑time content filtering that flags and blocks sensitive prompts; attempting to bypass filters may result in rejection, warnings, or account bans.
+
+· False. This describes practices at "Vidude," not the official Vidu app. 
+
+Claim 23: Prompt obfuscation techniques (e.g., Material Substitution Attack, Artistic Reframing Attack, Pseudo‑Educational Framing Attack, Ambiguous Action Substitution Attack) are not guaranteed to bypass Vidu’s filters and carry high risk.
+
+· False. This is a general taxonomy of jailbreak attacks for text-to-image models, not specific to Vidu. 
+
+---
+
+❓ Unclear (Not Verified in Available Sources)
+
+Claim 20: The free plan provides 80 credits (approx 20 standard 4-second videos) plus unlimited off-peak generation (usually 2:00–6:00 AM or 2:00–4:00 PM local time).
+
+· Unclear. Broadly correct, but specifics on off-peak windows are not confirmed. 
+
+If you have any other questions, feel free to ask!
 
