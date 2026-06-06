@@ -1,0 +1,35 @@
+Here is a structured update to your source list, incorporating the latest 2026 information from the recently surfaced authoritative documentation and API references.
+
+---
+
+Updated Source Inventory with New 2026 Findings
+
+Original Source 2026 Update / New Finding
+Vidu Open Platform Manual (shengshu.feishu.cn) Add Vidu Prompt Guide: This source now explicitly documents that specific prompt keywords like “大动态”, “中动态”, and “小动态” directly influence motion amplitude.
+Vidu Quickstart (platform.vidu.com) Seed Parameter Confirmed: The official documentation confirms a seed parameter for reproducibility. Specifying a fixed integer seed locks the noise sequence, ensuring consistent frame-to-frame results.
+Vidu API Endpoint Documentation (docs.ucloud.cn) Updated 2026 Parameter Specs: Fresh 2026 documentation for Text2Video, Reference2Video, and Start-End2Video. Notably, the Start-End2Video mode now requires the resolution ratio between the start and end frame to be between 0.8 and 1.25 for a smooth transition.
+Vidu Model Issues (docs.platform.vidu.com) Prompt Length Clarified: The official 2026 API docs have specified the maximum prompt length as 2000 characters.
+Vidu on Replicate (replicate.com) Seed Integration Confirmed: The Vidu Q3 Pro model on Replicate now supports the seed parameter for reproducible generations in the cloud.
+Vidu Q2 API (Reference2Video) (docs.ucloud.cn) Vidu Q2 Reference Pro Launched: On January 27, 2026, the Q2 Reference Pro model was released. This major update supports 2 videos + 4 images as multi-modal references, covering six core dimensions: effects, expressions, textures, actions, characters, and scenes.
+Vidu Start-End-to-Video (docs.ucloud.cn) Frame Ratio Spec: The documentation now specifies the technical constraint for image-to-image generation: the resolution ratio of the start frame to the end frame must be between 0.8 and 1.25.
+Vidu One-click MV (docs.ucloud.cn) Deep Multi-Agent System: The January 2026 update confirmed that the one-click MV function is powered by a deep Multi-Agent system. Internal agents handle directing, storyboarding, generation, and editing to produce industrial-grade, synchronized results.
+WaveSpeedAI Vidu API (wavespeed.ai) Enhanced Model Parameters: WaveSpeedAI now lists resolution options (540p, 720p, 1080p) and duration (1-8 seconds) for Q2 and Q3 models. The seed parameter is also available for reproducibility.
+Aliyun Vidu Prompt Guide (help.aliyun.com) Updated May 2026 Guide: The official guide now includes a detailed “Prompt Formula” and a “Keyword Dictionary” for practical prompting strategies.
+Chinese Prompt Keyword Dictionary (help.aliyun.com) Dynamic Control Keywords: This dictionary confirms that motion keywords like “大动态”, “中动态”, and “小动态” are officially recognized trigger words that change the model's motion amplitude.
+PromeAI Vidu Q3 Recipe (www.promeai.pro) Subject → Scene → Action → Camera → Style → Audio recipe remains a highly recommended advanced structure for detailed prompts.
+Vidu Prompt Guidelines on Feishu (ai.feishu.cn) Basic Structure Confirmed: The guide affirms the basic formula is Subject/Scene + Scene Description + Environment Description + Artistic Style/Medium. The goal is to unify the visual style and consistency.
+Vidu on Replicate (replicate.com) Audio Specifications: The Vidu Q3 model on Replicate now generates up to 16 seconds of synchronized audio, including dialogue and sound effects.
+Vidu Prompt Guidelines on Feishu (ai.feishu.cn) Motion Control Keywords: The guide explicitly notes that including the keyword “大动态” in a prompt will generate videos with larger motion amplitude.
+Vidu Q2 Reference Pro Launch (www.c114.net.cn) 2026-01-27 Launch: This new model supports 2 videos + 4 images as simultaneous references. It also features a “Video Magic Brush” for intelligent editing of existing videos.
+Vidu One-click MV Feature (m.sohu.com) Multi-Agent Workflow: The one-click MV feature uses a multi-agent system to automate narrative construction and audio synchronization, requiring only music and reference images as input.
+ViduClaw Launch - TipRanks (www.tipranks.com) Creator Plan Pricing: Introduced on May 8, 2026, the Creator Plan allows production of a cinema-quality 30-second ad for roughly 100 RMB, reducing costs to ~1% of traditional budgets.
+Vidude Community Guidelines (help.vidude.com) Explicit Policy: The guidelines explicitly state: AI-generated pornography or non-consensual likeness is strictly prohibited.
+
+⚙️ Technical Parameter Specifications (2026 Updates)
+
+· Negative Prompts: Token-sensitive; keep under 20 tokens and use no/not/without prefixes. Use parentheses for weighting, e.g., (no deformed hands:1.3).
+· Motion Amplitude: Use “小动态” (subtle), “中动态” (normal), or “大动态” (large) to precisely control movement intensity.
+· Camera Movement: Use seven standard verbs: 推近、拉远、横移、俯拍、仰拍、环绕、跟随.
+· Reproducibility: Set a fixed integer seed parameter to lock generation results, ensuring consistent video output.
+
+If any of these new features or updates require further clarification, please feel free to ask.
